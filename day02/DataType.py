@@ -58,3 +58,5 @@ print(str1 % "jack")
 # format函数格式化字符串
 str2 = "I am {0},I am {1} years old.".format("jack", 18)
 print(str2)
+
+print(None)
