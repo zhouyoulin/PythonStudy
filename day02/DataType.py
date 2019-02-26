@@ -33,3 +33,28 @@ my friend
 '''
 print(s2)
 print(type(s2))
+
+# 转义字符
+str1 = "oh \\my friend"
+print(str1)
+
+str2 = "c:\\user"
+print(str2)
+# 换行符
+str3 = "oh \r\nmy friend"
+print(str3)
+
+str4 = "let's go"
+print(str4)
+str4 = 'let\'s go'
+print(str4)
+
+# 字符串的格式化
+str1 = "I am %s,I am %d years old."
+print(str1%("Jack", 26))
+
+str1 = "I am %s"
+print(str1 % "jack")
+# format函数格式化字符串
+str2 = "I am {0},I am {1} years old.".format("jack", 18)
+print(str2)
