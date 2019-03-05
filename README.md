@@ -39,6 +39,37 @@
     - None型
         - None表示什么都没有，空
         - None可以用于删除变量的引用
+    - 列表
+        - 列表的创建
+        ```text
+        使用中括号括起来，之间值由逗号分隔开来
+        ```
+        ```python
+      list1 = [1,2,3,4,6,7]
+      list2 = ["a", "b", "g", "l"]
+        ```
+        - 访问列表中的值
+        ```text
+        访问列表用下标来访问，如list1[0]
+        ```
+        ```python
+      list1 = [1,2,3,4,6,7]
+      list2 = ["a", "b", "g", "l"]
+      print("list1[0]={0}".format(list1[0]))
+      print("list2[3]={0}".format(list2[3]))
+      print("list1[1:3]={0}".format(list1[1:3]))
+        ```
+        - 更新列表
+       ```text
+      更新列表即对列表中的元素进行重新赋值
+      list1[2] = "hello"
+        ```
+        - 删除列表元素
+        ```text
+      删除列表的元素用del语句
+      del list1[2]
+      print(list1)
+        ```
 ## 运算符
 - 数字运算符
     - 基本数字运算符(+ - * / // % **)
@@ -66,3 +97,57 @@
     - is 我所理解的身份运算符表示值相等并且内存地址相同
     - is not
 ## 分支和循环
+### 分支
+- 单路分支
+    - 语法格式
+    ```py
+    if 条件语句:
+        语句块
+    ```
+    - 例如
+    ```python
+  a = 10
+  if a < 20:
+      print("a小于20")
+    ```
+- 多路分支
+    - 语法格式
+    ```py
+    if 条件语句1:
+        语句块1
+    elif 条件语句2:
+        语句块2
+    ...
+    else:
+        语句块
+    ```
+    - 例如
+    ```text
+    学生成绩如果在90分以上打印a，80分以上打印b，60分以上打印c，其他打印d
+    ```
+    ```python
+  grade = 80
+  if grade>=90:
+      print("a")
+  elif grade>=80:
+      print("b")
+  elif grade>=60:
+      print("c")
+  else:
+      print("d")
+    ```
+    - 注意python中没有switch语句
+### 循环
+- for循环
+    - 语法结构
+    ```text
+    for 变量 in 列表:
+        语句块
+        ...   
+    ```
+    - 代码示例
+    ```python
+  list1 = ["a","b","v",45,14]
+  for item in list1:
+      print(item)
+    ```
