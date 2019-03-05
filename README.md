@@ -159,6 +159,13 @@
     else:
         语句块
     ```
+    - range()函数
+        - range函数用于生成一个左闭右开的数字列表
+        - 例如打印1-10，注意右区间11
+        ```python
+      for i in range(1, 11):
+          print(i)
+        ```
 - while循环
     - 语法结构
     ```text
