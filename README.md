@@ -151,3 +151,25 @@
   for item in list1:
       print(item)
     ```
+    - for else 结构 在for循环结束后执行else语句中的代码
+    ```text
+    for 变量 in 列表:
+        语句块
+        ... 
+    else:
+        语句块
+    ```
+- while循环
+    - 语法结构
+    ```text
+    while 条件语句:
+         代码块
+    ```
+    - 代码示例
+    ```python
+  a = 0
+  while a > 20:
+      print(a)
+      a+=1
+    ```
+    - while循环同样也有while else结构
