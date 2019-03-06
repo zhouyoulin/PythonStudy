@@ -47,3 +47,10 @@ else:
         if i != 3:
             print("*",end="")
         print("")
+
+a = 0
+while a < 10:
+    print(a)
+    a += 1
+else:
+    print("else {0}".format(a))
