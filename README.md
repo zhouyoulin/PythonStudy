@@ -204,3 +204,48 @@
   change_int(b)
   print(b)  
     ```
+- 参数类型
+    - 普通参数
+    ```text
+    语法定义
+      def func(v1, v2,...):
+          func
+    调用（遵循顺序）
+      func(v1, v2,...)
+    ```
+    - 关键字参数
+    ```text
+    语法定义
+    def func(name1, name2,....):
+          func
+    关键字调用（不用遵循顺序）
+    func(name2=v2,name1=v1,...)
+    ```
+    - 默认参数
+    ```text
+    语法
+    def func(v1,v2=value):
+          func
+    调用（默认参数带有默认值可以不传）
+    func(v1)
+    func(v1,v2=value)
+    ```
+    - 收集参数
+    ```text
+    语法
+    def func(*args):
+          func
+    收集参数以*号标识，将所有未命名的变量参数以元组的形式传入
+    func(v1,v2,v3...)
+    收集参数还有一种以字典方式传入的，以**来标注
+    def func(**kwargs):
+          func
+    调用(以键值对的方式传入)
+    func(arg1=v1,arg2=v2,...)
+    ```
+- return语句
+    ```text
+    return语句用于向调用者返回一个表达式，不带参数的return默认返回None
+    ```
+- 变量作用域
+    - 遵循LEGB原则，在局部找不到就在局部外的局部去找，如果在找不到就找全局的，全局找不到就找内置的
