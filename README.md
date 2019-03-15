@@ -57,7 +57,14 @@
       list2 = ["a", "b", "g", "l"]
       print("list1[0]={0}".format(list1[0]))
       print("list2[3]={0}".format(list2[3]))
-      print("list1[1:3]={0}".format(list1[1:3]))
+        ```
+        - 列表分片
+        ```python
+      # 列表分片list[x:y:z]，x起始下标，y结束下标，z步长（可以不传）
+      list = [1, 2, 3, 4, 5, 6]
+      print(list[1:5])# 打印下标1-4的元素
+      print(list[1:4:2])# 下标1-4的元素，割一个数打印
+      
         ```
         - 更新列表
        ```text
