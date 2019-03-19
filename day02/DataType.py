@@ -242,3 +242,64 @@ print(tup1)
 for i in tup1:
     print(i)
 
+# 字典
+# 字典的创建
+dict = {"name": "jack", "age": 15, "work": "student"}
+print(dict)
+
+# 字典的访问
+print(dict["name"])
+# 若访问没有的键 会报错
+# print(dict["k"])
+
+# 字典的修改
+# 字典的修改可以通过key来修改
+dict["name"] = "rose"
+print(dict["name"])
+
+# 字典的删除也可以用del
+del dict["name"]
+print(dict)
+
+del dict
+print(dict)
+
+# 字典中的值可以多次出现，但是key值是唯一的
+# 创建字典的时候如果一个key值被赋予多次值，字典默认为最后一次的值
+dict = {"name": "jack", "age": 15, "work": "student", "name": "bob"}
+print(dict["name"])
+
+# 字典的函数
+# len 求字典的长度
+print(len(dict))
+# str 将字典转化成字符串
+str = str(dict)
+print(str)
+# 字典内置函数
+# get 返回指定键的值，如果值不存在返回default的值
+print(dict.get("name"))
+print(dict.get("grade", 98))
+# 成员判断，判断键是否在字典中
+print("name" in dict)
+
+# 遍历
+# 通过items遍历键值
+for k, v in dict.items():
+    print(k, "----", v)
+# 通过keys得到所有的key，根据key来得到所对应的值
+for key in dict.keys():
+    print(key, "---", dict[key])
+# 通过values得到字典中所有的值
+for v in dict.values():
+    print(v)
+
+# 通过setdefault方法获取一个键所对应的值，如果不存在会设置默认default的值 并添加到字典中
+print(dict.setdefault("name"))
+
+# update 将另一个字典的元素更新到字典中
+dict1 = {"name": "tick", "sex": "male"}
+dict.update(dict1)
+print(dict)
+
+# 字典也存在copy函数，同list一样是浅复制
+# clear函数 和list一样
