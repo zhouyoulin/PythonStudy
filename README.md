@@ -77,6 +77,93 @@
       del list1[2]
       print(list1)
         ```
+        - 列表的常用运算
+        ```python
+       # 列表遍历
+       for i in list:
+            print(i)
+            
+        # 列表的操作运算
+        l1 = [1, 2, 3]
+        l2 = [5, 6, 7]
+        #相加 组合
+        print(l1 + l2)
+        # 乘法 列表扩充多少倍
+        print(l1 * 3)
+        # 成员判断
+        print(1 in l1)
+        print("aaa" in l1)
+        ```
+        - 关于列表的函数运算
+        ```python
+        # len求列表长度 
+        # max 求列表的最大值
+        # min 求列表的最小值
+        list1 = [1,4,7,5,34,67]
+        print(len(list1))
+        print(max(list1))
+        print(min(list1))
+        
+        # append 函数用于在列表最后添加一个元素
+        list1.append(4)
+        print(list1)
+        
+        # account函数，用于统计列表中一个元素出现的次数
+        print(list1.account(4))
+        
+        # extend函数 在列表的最后一次性追加另一个序列里的值
+        list2 = ["hello", "word", "nice"]
+        list1.extend(list2)
+        print(list1)
+        
+        # index 函数 用于查找元素第一次出现的位置
+        print(list1.index(4))
+        # 注意 index函数如果列表中没有该元素会报错
+        # print(list1.index("kkkkkk"))
+        
+        # insert函数用于向指定位置插入一个指定的元素
+        list1.insert(2, "ppp")
+        print(list1)
+        # insert操作如果插入位置超出列表的长度，则会在最后一个位置插入
+        list1.insert(99, "insert")
+        print(list1)
+        # 移除操作 pop(index = -1)  默认移除列表中最后一个元素
+        list1.pop()
+        print(list1)
+        # pop也可以用于移除指定位置的元素
+        list1.pop(2)
+        print(list1)
+        # pop 函数移除超过下标的的元素，会报错
+        
+        # remove函数也用于移除操作，只是用于移除指定的元素
+        # 如果列表中不存在该元素，则会报错
+        list1.remove("ppp")
+        
+        # reverse函数用于反转列表
+        list1.reverse()
+        print(list1)
+        
+        # list.sort() 列表排序操作
+        list1.sort()
+        print(list1)
+        # 由于经过上面的运算后 list1已经存在字符串和数字，上面代码会报错
+        # sort函数不支持字符和数字进行大小比较
+        
+        list3 = [3,1,5,45,34,65,23,8]
+        list3.sort()
+        print(list3)
+        
+        # 列表的复制 copy 
+        # 注意copy函数只是浅拷贝，只拷贝一层
+        # 如果列表是嵌套列表，嵌套的列表只拷贝其引用地址
+        
+        l1 = [1,2,["111","222","333"],4]
+        l2 = li.copy()
+        # 我们通常用id()函数来查看变量在内存中是否是一份
+        print(id(l1[2]))
+        print(id(l2[2]))
+        # 可以看出这两个变量的id是相同的一份
+        ```
 ## 运算符
 - 数字运算符
     - 基本数字运算符(+ - * / // % **)
