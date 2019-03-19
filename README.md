@@ -216,6 +216,7 @@
         ```
         - 字典的常用函数
         ```python
+      dict = {"name": "jack", "age": 15, "work": "student", "name": "bob"}
       # 字典的函数
       # len 求字典的长度
       print(len(dict))
