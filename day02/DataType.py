@@ -161,7 +161,8 @@ print(l.index(2))
 print(l)
 l.insert(1, "kkk")
 print(l)
-
+print("*" * 30)
+l.insert(40, "kkk")
 # 移除操作
 # list.pop(index=-1) 用于移除列表中的元素，默认为最后一个元素
 print(l)
@@ -193,6 +194,7 @@ print(l)
 
 # list.sort列表排序
 # sort 函数不能对同时存在string和int的列表进行排序
+print("*" * 50)
 # l.sort()
 # print(l)
 
@@ -217,3 +219,26 @@ l2 = l1.copy()
 print(id(l2))
 print(id(l2[2]))
 # 可以看出嵌套列表的元素的地址还是相同的指向
+
+
+print("*" * 50)
+
+# tuple创建
+tup1 = (10, 2, 3, "hell")
+print(type(tup1))
+
+# 访问元组
+print(tup1[0])
+print(tup1[1:])
+
+# 元组是不允许修改的
+# 下面的代码将两个元组进行拼接，但是得到的元组已经不是tup1了
+print(id(tup1))
+tup2 = "hello", "word"
+tup1 += tup2
+print(id(tup1))
+print(tup1)
+# 元组的遍历
+for i in tup1:
+    print(i)
+
