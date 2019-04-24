@@ -431,3 +431,64 @@
     ```
 - 变量作用域
     - 遵循LEGB原则，在局部找不到就在局部外的局部去找，如果在找不到就找全局的，全局找不到就找内置的
+## python面向对象
+- 类
+    - 用来描述具有相同属性和方法对象的集合。它定义了该集合中每个对象所共有的属性和方法，对象是类的实例
+    - 类的定义
+    ```python
+  class ClassName:
+      pass
+    ```
+    - 类的实例化对象
+    ```python
+  class ClassName:
+      pass
+  instance = ClassName()
+    ``` 
+    - 类的构造方法
+        - __init__(self)，该方法会在实例化对象的时候被调用,该方法第一个参数为self，代表类的实例，而非类
+     ```python
+  class Student:
+    def __init__(self, name, age):
+      self.name = name
+      self.age = age
+  stu = Student("xiaowang",16)
+    ```
+    - 类属性
+        - 类的私有属性
+            - __private_attr:以两个下划线开头，为类的私有属性，不能在类的外部访问。在类的内部使用self.__private_attr访问。
+            （python中类的私有属性以及方法不是与java相同，python实际上是通过对私有属性和方法进行改名来达到私有的）
+        - 类属性和实例属性
+            - 类属性所有的通过该类实例化的对象都共享此属性
+            - 实例属性只能在自己的对象里面使用，其他的对象不能直接使用
+            - 关于类属性和实例属性的区别可以参考示例
+            ```python
+          class Student:
+            work = "study" # 对象属性
+            def __init__(self, name, age):
+              self.name = name
+              self.age = age # 实例属性
+            ```
+    - 类方法
+        - 类的实例方法，实例方法只有实例对象能够调用，而且默认的方法都是实例方法
+        - 类的类方法，类方法@classmethod来标注，这种方法可以通过类对象来调用也可以通过实例对象来调用
+        - 类的静态方法，使用@staticmethod来标注,这种方法可以通过类对象调用也可以实例对象调用
+        - 示例
+        ```python
+      class A:
+        def func_a(self):
+          print("实例方法")
+    
+        @classmethod
+        def func_b(cls):
+          print("类方法")
+        
+        @staticmethod
+        def func_c():
+          print("静态方法")
+        
+      if __name__ == '__main__':
+          a = A()
+          a.func_a() # 实例方法调用
+          # A.func_a() #通过类调用实例方法会报错
+        ```
